@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woows Studio Uploader</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Woows Studio Uploader</h1>
+  <p>Woows Studio Uploader is an internal publishing tool operated by <strong>Woows Studio</strong>.
+     It is used only by the Woows Studio team to publish videos to YouTube channels and TikTok accounts that Woows Studio owns
+     (for example <em>Mind Trick Lab</em> and <em>Whispered Legend</em>).</p>
+
+  <h2>What the app does</h2>
+  <ul>
+    <li>Produces original videos (puzzles, science facts, illustrated folklore stories) for Woows Studio's own channels.</li>
+    <li>A team member reviews and approves every video before it is published.</li>
+    <li>Uploads approved videos to the connected Woows Studio YouTube channel through the YouTube Data API, with a scheduled publish time,
+        and adds the script's English captions and the channel's playlists.</li>
+    <li>Sends short vertical cuts of approved videos to the connected Woows Studio TikTok account as drafts. A team member opens the
+        TikTok inbox notification, reviews the draft and posts it in the TikTok app.</li>
+  </ul>
+
+  <h2>Google / YouTube access</h2>
+  <ul>
+    <li><code>youtube.upload</code>: to upload approved videos to the connected channel.</li>
+    <li><code>youtube.readonly</code>: to read the connected channel's ID and name so the right channel is used.</li>
+    <li><code>youtube</code>: to create the channel's playlists and add uploaded videos to them.</li>
+    <li><code>youtube.force-ssl</code>: to upload English caption files for videos the app uploaded.</li>
+  </ul>
+
+  <h2>TikTok access</h2>
+  <ul>
+    <li><code>user.info.basic</code>: to read the connected account's display name so the right account is used.</li>
+    <li><code>video.upload</code>: to send approved videos to the connected account's TikTok inbox as drafts. Nothing is posted
+        until a team member completes the post in TikTok.</li>
+  </ul>
+  <p>The app is not offered to the public and does not access any other Google or TikTok account data.</p>
+
+  <p class="links"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+  <p class="contact">Contact: <a href="mailto:woows.studio@gmail.com">woows.studio@gmail.com</a></p>
+</main>
+</body>
+</html>

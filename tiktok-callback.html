@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Connecting TikTok - Woows Studio Uploader</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Connecting TikTok…</h1>
+  <p>Returning to Woows Studio Uploader on this computer. If nothing happens, make sure the uploader is running and
+     <a id="next" href="#">continue here</a>.</p>
+  <p class="links"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+</main>
+<script>
+  // The uploader runs only on the team's own computer; TikTok requires an https redirect, so this page hands the
+  // authorization result (code, state or error) to it unchanged.
+  var next = "http://127.0.0.1:8000/api/tiktok/callback" + window.location.search;
+  document.getElementById("next").href = next;
+  window.location.replace(next);
+</script>
+</body>
+</html>
